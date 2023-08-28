@@ -7,7 +7,7 @@ import { DataServiceService } from '../service/data-service.service';
   styleUrls: ['./number-display-component.component.scss'],
 })
 export class NumberDisplayComponentComponent implements OnInit {
-  showRandomNumber!: number[];
+  showRandomNumber!: number[] | undefined;
 
   constructor(private dataService: DataServiceService) {}
 

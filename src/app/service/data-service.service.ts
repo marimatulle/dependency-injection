@@ -9,7 +9,9 @@ export class DataServiceService {
   constructor() { }
 
   public getRandomNumber(): number {
-    return this.array.push(Math.floor(Math.random() * 100) + 1);
+    const randomNumber = Math.floor(Math.random() * 100);
+    this.array.push(randomNumber);
+    return randomNumber;
   }
 
   public getItemsArray() {

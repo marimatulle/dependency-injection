@@ -7,7 +7,7 @@ import { DataServiceService } from '../service/data-service.service';
   styleUrls: ['./random-number-component.component.scss'],
 })
 export class RandomNumberComponentComponent implements OnInit {
-  randomNum!: number;
+  randomNum: number | undefined;
 
   constructor(private dataService: DataServiceService) {}
 
@@ -15,5 +15,10 @@ export class RandomNumberComponentComponent implements OnInit {
 
   generateRandomNumber(): void {
     this.randomNum = this.dataService.getRandomNumber();
+  }
+
+  clearNumbers(): void {
+    this.dataService.clearArray();
+    this.randomNum = undefined;
   }
 }

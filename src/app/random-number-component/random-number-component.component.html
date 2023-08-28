@@ -1,1 +1,6 @@
 <button (click)="generateRandomNumber()">Generate Random Number</button>
+<button (click)="clearNumbers()">Clear</button>
+
+<div *ngIf="randomNum !== undefined">
+  <p>The random number is: {{ randomNum }}</p>
+</div>
